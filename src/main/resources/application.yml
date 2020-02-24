@@ -1,0 +1,29 @@
+
+#spring:
+#  datasource:
+#    url:
+#    username:
+#    password:
+
+# application 이 구동될때마다 매번 새로 스키마를 생성하는 옵션. 개발중일때는 create가 좋지만 validate 를 흔히 사용함.
+#spring:
+#  jpa:
+#    hibernate:
+#      ddl-auto: create
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
